@@ -49,42 +49,55 @@ It is a bar chart showing how how each class is distributed in dataset
 
 ### Design and Test a Model Architecture
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+As a first step, I decided to shuffle dataset using scikit learn library and the I define a function to normalized images. 
 
-As a first step, I decided to convert the images to grayscale because ...
 
-Here is an example of a traffic sign image before and after grayscaling.
+Normalize function pseudocode : 
 
-![alt text][image2]
+for each image:
+   for each pixel in image:
+      pixel = (pixel - 128)/ 128
 
-As a last step, I normalized the image data because ...
+Here is an example of a traffic sign image before and after normalization.
 
-I decided to generate additional data because ... 
+![alt text][normalization]
 
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
-
-The difference between the original data set and the augmented data set is the following ... 
+Observation: the image look strange, but the values are ok,the data has mean zero and equal variance.
 
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
+### Model Architecture
+
+I decided use the LeNet's architeture to classify the Traffic Signs dataset.
+
+LeNet, a pioneering convolutional network by [LeCun](http://yann.lecun.com/exdb/lenet/) that classifies digits, was applied by several banks to recognise hand-written numbers on checks (cheques) digitized in 32x32 pixel images.
+
+
 My final model consisted of the following layers:
 
-| Layer         		|     Description	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+ ### Layer 1: Convolutional. Input = 32x32x3. Output = 28x28x6.
+     strides= [1, 1, 1,1] , padding= VALID
+ 
+ #### RELU Activation.
+ #### MAX Pooling. Input = 28x28x6. Output = 14x14x6.
+ 
+ ### Layer 2: Convolutional. Output = 10x10x16.
+     strides=[1, 1, 1, 1], padding='VALID'
+    
+ #### RELU Activation.
+ #### MAX Pooling. Input = 10x10x16. Output = 5x5x16.
+ #### Flatten. Input = 5x5x16. Output = 400.
+ 
+ ### Layer 3: Fully Connected. Input = 400. Output = 120.
+
+ #### RELU Activation.
+ 
+ ### Layer 4: Fully Connected. Input = 120. Output = 84.
+ 
+ #### RELU Activation.
+ 
+ ### Layer 5: Fully Connected. Input = 84. Output = 43.
  
 
 
