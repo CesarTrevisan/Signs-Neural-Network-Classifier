@@ -40,12 +40,12 @@ signs data set:
 
 Here is some random examples of images in dataset with their label
 
-![alt text][example_randon_signs.jpg]
+![alt text][image9]
 
 Here is an exploratory visualization of the data set. 
 It is a bar chart showing how how each class is distributed in dataset
 
-![alt text][example_chart.jpg]
+![alt text][image10]
 
 ### Design and Test a Model Architecture
 
