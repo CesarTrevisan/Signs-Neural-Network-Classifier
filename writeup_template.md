@@ -154,7 +154,9 @@ The model was able to correctly guess 17 of the 23 traffic signs, which gives an
 
 This result is bellow of expected, one of reasons can be the distribution of examples, how we figure out in distribuition chart to some signs we have a lot more samples, so the model will tend to predict with more sure sign that he saw more in training.
 
-I printed probabilities for each of these 23 images, so we can 
+I printed probabilities for each of these 23 images, so we can the top 5 soft max probabilities, here a example:
+
+![alt text][softmax_30]
 
 | Class  |         Label          |   Probability (%)                         |
 |:------:|:----------------------:|:-----------------------------------------:|
@@ -164,23 +166,7 @@ I printed probabilities for each of these 23 images, so we can
 |  3     | Speed limit (60km/h)   |    0.00000000000000000000000824           |
 |  7     | Speed limit (100km/h)  |    0.0000000000000000000000000000000137   |
 
+### Top 5 soft max probabilities for first 6 test images:
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
-
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
-
+![alt text][softmax]
 
