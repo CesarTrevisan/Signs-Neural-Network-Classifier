@@ -13,16 +13,12 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
 [image9]: ./example_randon_signs.jpg "Examples"
 [image10]: ./example_chart.jpg "Chart"
+[normalization]: ./normalizes.jpg "Examples"
+[23_examples]: ./23_examples.jpg "Chart"
+[softmax_30]: ./softmax_30.jpg "Examples"
+[softmax]: ./softmax.jpg "Chart"
 
 
 ### Data Set Summary & Exploration
