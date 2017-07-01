@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [image9]: ./example_randon_signs.jpg "Examples"
 [image10]: ./example_chart.jpg "Chart"
-[normalization]: ./normalizes.jpg "Examples"
+[normalization]: ./normalized.jpg "Examples"
 [23_examples]: ./23_examples.jpg "Chart"
 [softmax_30]: ./softmax_30.jpg "Examples"
 [softmax]: ./softmax.jpg "Chart"
