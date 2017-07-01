@@ -73,44 +73,45 @@ I decided use the LeNet's architeture to classify the Traffic Signs dataset.
 
 LeNet, a pioneering convolutional network by [LeCun](http://yann.lecun.com/exdb/lenet/) that classifies digits, was applied by several banks to recognise hand-written numbers on checks (cheques) digitized in 32x32 pixel images.
 
+To use LeNet, I've ajusted:
+
+   * first Layer to receive 32x32x2 input, the original convolutional network expected 32x32x1 images
+   * last Layer to output 43 classes, the original convolutional network was seted configured to 10 classess.
 
 My final model consisted of the following layers:
 
  ### Layer 1: Convolutional. Input = 32x32x3. Output = 28x28x6.
-     strides= [1, 1, 1,1] , padding= VALID
+      strides= [1, 1, 1,1] , padding= VALID
  
- #### RELU Activation.
- #### MAX Pooling. Input = 28x28x6. Output = 14x14x6.
+      RELU Activation.
+      MAX Pooling. Input = 28x28x6. Output = 14x14x6.
  
  ### Layer 2: Convolutional. Output = 10x10x16.
-     strides=[1, 1, 1, 1], padding='VALID'
+      strides=[1, 1, 1, 1], padding='VALID'
     
- #### RELU Activation.
- #### MAX Pooling. Input = 10x10x16. Output = 5x5x16.
- #### Flatten. Input = 5x5x16. Output = 400.
+      RELU Activation.
+      MAX Pooling. Input = 10x10x16. Output = 5x5x16.
+      Flatten. Input = 5x5x16. Output = 400.
  
  ### Layer 3: Fully Connected. Input = 400. Output = 120.
 
- #### RELU Activation.
+      RELU Activation.
  
  ### Layer 4: Fully Connected. Input = 120. Output = 84.
  
- #### RELU Activation.
+      RELU Activation.
  
  ### Layer 5: Fully Connected. Input = 84. Output = 43.
  
 
+I trained my model several time to find the optimum parameters to reach accuracy of 0.93. I have tried using non-normalized data and gray-scaled, but the best result was using normalized 3 channels images.
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
-
-To train the model, I used an ....
-
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+In my final approach, I used [Adam Optimizer](https://www.tensorflow.org/api_docs/python/tf/train/AdamOptimizer) with 0.001 Learning rate. My batch size was 128, number of epochs iqual 100.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of 1.0
+* validation set accuracy of 0.942
+* test set accuracy of 0.897
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
