@@ -1,3 +1,21 @@
+
+## Project: Build a Traffic Sign Recognition Program
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+
+Overview
+---
+In this project, you will use what you've learned about deep neural networks and convolutional neural networks to classify traffic signs. You will train and validate a model so it can classify traffic sign images using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). After the model is trained, you will then try out your model on images of German traffic signs that you find on the web.
+
+We have included an Ipython notebook that contains further instructions 
+and starter code. Be sure to download the [Ipython notebook](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb). 
+
+We also want you to create a detailed writeup of the project. Check out the [writeup template](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup_template.md) for this project and use it as a starting point for creating your own writeup. The writeup can be either a markdown file or a pdf document.
+
+To meet specifications, the project will require submitting three files: 
+* the Ipython notebook with the code
+* the code exported as an html file
+* a writeup report either as a markdown or pdf file 
+
 # **Traffic Sign Recognition** 
 
 **Build a Traffic Sign Recognition Project**
@@ -61,8 +79,6 @@ Here is an example of a traffic sign image before and after normalization.
 Observation: the image look strange, but the values are ok,the data has mean zero and equal variance.
 
 
-####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
-
 ### Model Architecture
 
 I decided use the LeNet's architeture to classify the Traffic Signs dataset.
@@ -109,9 +125,9 @@ My final model results were:
 * validation set accuracy of 0.942
 * test set accuracy of 0.897
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web:
 
